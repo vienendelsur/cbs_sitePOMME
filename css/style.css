@@ -31,28 +31,100 @@ h1#header {
 /* la propriété display et la valeur block transforment le lien a inline en élément de type block on peut donc lui attribuer des propriétés de taille ; on positionne l'image de fond qui a les mêmes dimensions que le cadre ainsi créé */
 #header a {
     display: block;
-
     position: relative;
-
     top: 15px;
     left: 350px;
-
     width: 400px;
     height: 70px;
-    
     background: url(../img/title.gif) no-repeat;
-
      /* le text-indent négatif est fait pour cacher le texte au visiteur (il est hors de la page) mais il est lu par les moteurs de recherche, il est décalé vers la gauche */
-
     text-indent: -5000px;
 }
 
+/* La navigation : la ul */
 
+nav ul {
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    /* repeat-x répétition horizontale axe abscisses */
+    background: url(../img/bg_menu.gif) repeat-x 0 -25px;
+    list-style-type: none;
+}
 
+nav ul li {
+    float: left;
+    text-align: center;
+}
 
+nav ul li a {
+    display: block;
+    width: 130px;
+    line-height: 20px;
+    border-right: 2px solid #cf9;
 
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
+nav ul li a:hover {
+    /* sur le :hover l'image se décale vers le bas  */
+    background: url("../img/bg_menu.gif") repeat-x 0 0;
+}
+
+/* le contenu principal dans la section */
+
+#principal {
+    padding: 0 30px 0 100px;
+
+    background-image: url("../img/bg_page.gif");
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    /* background: url(../img/bg_page.gif) no-repeat 15px 15px; */
+}
+
+#principal h2 {
+    padding-left: 25px;
+    background: url("../img/little_apple.gif") no-repeat left center;
+
+    color: #9b2;
+    font-size: 1.4em;
+    line-height: 25px;
+}
+
+#principal h3 {
+    margin-left: 15px;
+    padding-left: 5px;
+    border-bottom: 1px solid #9b2;
+    border-left: 1px solid #9b2;
+    
+    color: #9b2;
+}
+
+blockquote {
+    padding-left: 10px;
+    border-left: 5px solid #9b2;
+}
+
+#principal p {
+    line-height: 1.7em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+/* pied de page  */
 footer {
-    height: 60px;
-    line-height: 60px;
+    background: #ab4;
+    
+}
+
+footer p {
+    margin: 0;
+    padding: 10px;
+    
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
 }
